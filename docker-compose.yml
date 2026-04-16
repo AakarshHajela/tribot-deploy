@@ -22,8 +22,8 @@ services:
     build: ./backend
     container_name: tribot-backend
     restart: unless-stopped
-    ports:
-      - "8000:8000"
+    expose:
+      - "8000"
     env_file:
       - ./backend/.env
     environment:
@@ -32,9 +32,22 @@ services:
       DB_NAME: tribot
       DB_USER: postgres
       DB_PASSWORD: postgres
+      ALLOWED_ORIGINS: "http://localhost,http://localhost:80,http://frontend"
     depends_on:
       db:
         condition: service_healthy
+
+  frontend:
+    build:
+      context: ./frontend
+      args:
+        VITE_API_BASE_URL: ""
+    container_name: tribot-frontend
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
 
 volumes:
   pgdata:
