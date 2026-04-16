@@ -1,0 +1,12 @@
+# ── FastAPI / server logs ─────────────────────────────
+*.log
+
+# ── Database ──────────────────────────────────────────
+*.db
+
+# ── AI / model artifacts ──────────────────────────────
+checkpoints/
+data/
+*.pt
+*.bin
+*.safetensors

@@ -1,0 +1,97 @@
+/* Reset basic margins */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: #f9fafb;
+}
+
+/* Ensure the app covers the full width and height of the browser */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100vw; 
+  overflow-x: hidden;
+}
+
+/* Navbar: Forces 100% width and spaces out logo vs profile */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 0 40px; 
+  height: 72px;
+  border-bottom: 1px solid #e5e7eb;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  height: 100%;
+}
+
+.nav-tabs {
+  display: flex;
+  gap: 8px;
+  height: 100%;
+}
+
+.tab, .active-tab {
+  background: none;
+  border: none;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0 16px;
+  color: #6b7280;
+  height: 100%;
+  border-bottom: 3px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.active-tab {
+  color: #2563eb; 
+  border-bottom: 3px solid #2563eb;
+}
+
+/* Main Content: Takes up all available horizontal space */
+.main-content {
+  flex: 1;
+  width: 100%;
+  padding: 32px;
+  box-sizing: border-box;
+}
+
+.profile-pic-img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%; /* This makes it a circle */
+  object-fit: cover;
+  display: block; /* Removes any weird spacing at the bottom */
+}
+
+.nav-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Adjust this number if you want the name closer or further from the pic */
+  cursor: pointer;
+}
+
+.profile-pic-img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
+
+.doctor-name {
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+}

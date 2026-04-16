@@ -1,0 +1,8 @@
+
+model:
+  name_or_path: "alirezamsh/small100"
+  device: "auto"               # auto | cpu | cuda
+
+generation:
+  num_beams: 4
+  max_new_tokens: 256

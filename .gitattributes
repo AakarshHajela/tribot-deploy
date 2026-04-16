@@ -1,0 +1,5 @@
+# Ensure Windows scripts always use CRLF
+*.bat text eol=crlf
+
+# Ensure Mac scripts always use LF
+*.command text eol=lf
