@@ -15,6 +15,7 @@ export interface TranslationRequest {
   target_language: string;
   source_text: string;
   session_id?: string | null;
+  patient_id?: string | null;
 }
 
 export interface TranslationResponse {
